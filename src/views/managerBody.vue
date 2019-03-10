@@ -1,8 +1,11 @@
 <template>
     <section class="manager-body">
+      <!--个人中心左边垂直菜单-->
       <div class="manager-aside">
+        <!--菜单组件-->
         <ManagerLeft></ManagerLeft>
       </div>
+      <!--右边内容区域-->
       <div class="manager-content">
 
         <router-view/>

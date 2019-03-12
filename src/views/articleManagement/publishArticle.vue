@@ -1,9 +1,15 @@
 <template>
     <section class="publish-article">
-      <p>发布文章</p>
+      <!--面包屑-->
+      <div class="tab-title">
+        <span><i class="glyphicon glyphicon-home"></i> 后台管理系统</span>
+        <span><i class="glyphicon glyphicon-menu-right"></i> 文章管理</span>
+        <span><i class="glyphicon glyphicon-menu-right"></i> 编辑文章</span>
+      </div>
+
 
       <!--富文本编辑器-->
-      <div ref="editor" style="width: 700px; text-align:left; background-color: #fff;"></div>
+      <div ref="editor" style="margin: 10px 0; width: 700px; text-align:left; background-color: #fff;"></div>
     </section>
 </template>
 
@@ -72,6 +78,30 @@
 
 <style scoped>
   .publish-article{
-    background-color: deepskyblue;
+    background-color: #fff;
+    padding: 10px;
+  }
+  .tab-title{
+    padding-left: 10px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eee;
+  }
+  .tab-title span{
+    color: #333;
+    font-size: 14px;
+    /*padding: 0 3px;*/
+  }
+  .tab-title{
+    padding-left: 10px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+  }
+  .tab-title span{
+    color: #333;
+    font-size: 14px;
+    /*padding: 0 3px;*/
   }
 </style>

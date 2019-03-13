@@ -6,6 +6,11 @@
         <span><i class="glyphicon glyphicon-menu-right"></i> 奇石管理</span>
         <span><i class="glyphicon glyphicon-menu-right"></i> 查询奇石</span>
       </div>
+      <!--<ol class="breadcrumb">-->
+        <!--<li><a href="#">Home</a></li>-->
+        <!--<li><a href="#">Library</a></li>-->
+        <!--<li class="active">Data</li>-->
+      <!--</ol>-->
 
       <div class="search-content input-group">
         <input class="form-control" type="text" placeholder="Search for">
@@ -27,7 +32,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr v-for="(item,index) in stoneList" :key="index">
+          <tr style="vertical-align: center" v-for="(item,index) in stoneList" :key="index">
             <th scope="row">{{index+1}}</th>
             <td>{{item.stoneTitle}}</td>
             <td>{{item.stoneType}}</td>
@@ -119,7 +124,7 @@
     text-align: center;
     background-color: #fff;
   }
-  table th,td{
+  .stone-table>.table>table>tbody>tr>td{
     text-align: center;
     vertical-align: center;
   }

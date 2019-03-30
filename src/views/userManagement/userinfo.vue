@@ -33,7 +33,7 @@
   .user-info{
     width: 100%;
     padding: 10px;
-    background-color: blanchedalmond;
+
   }
   .tab-title{
     padding-left: 10px;

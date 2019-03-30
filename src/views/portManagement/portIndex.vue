@@ -10,8 +10,8 @@
       <div class="search-content input-group">
         <input class="form-control" type="text" placeholder="Search for">
         <span class="input-group-btn">
-        <button class="btn btn-default" type="button">搜索</button>
-      </span>
+          <button class="btn btn-default" type="button">搜索</button>
+        </span>
       </div>
       <!--奇石-->
       <div class="port-table table-responsive">

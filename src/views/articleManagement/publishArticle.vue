@@ -7,9 +7,49 @@
         <span><i class="glyphicon glyphicon-menu-right"></i> 编辑文章</span>
       </div>
 
+      <div class="form-box">
+        <!--<form class="">-->
+        <!--<div class="form-group row">-->
+        <!--<label class="col-sm-2" for="stone-title">奇石标题</label>-->
+        <!--<input type="text" class="col-sm-10 form-control" id="stone-title" placeholder="请输入奇石标题">-->
+        <!--</div>-->
+        <!--</form>-->
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="stone-title" class="col-sm-2 control-label">文章标题</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="stone-title" placeholder="请输入标题">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="publish-time" class="col-sm-2 control-label">发布时间</label>
+            <div class="col-sm-4">
+              <input type="date" class="form-control" id="publish-time">
+            </div>
+            <div class="col-sm-4">
+              <input type="time" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="select" class="col-sm-2 control-label">文章类型</label>
+            <div class="col-sm-10">
+              <select id="select" class="form-control" >
+                <option>寿山石</option>
+                <option>九龙壁</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
 
       <!--富文本编辑器-->
-      <div ref="editor" style="margin: 10px 0; width: 700px; text-align:left; background-color: #fff;"></div>
+      <div ref="editor" style="margin: 10px 0; width: 1000px; text-align:left; background-color: #fff;"></div>
+
+      <div class="btn-content">
+        <button class="btn btn-info publish-btn">发布</button>
+        <button class="btn btn-danger cancel-btn">取消</button>
+      </div>
     </section>
 </template>
 
@@ -79,7 +119,8 @@
 <style scoped>
   .publish-article{
     background-color: #fff;
-    padding: 10px;
+    padding: 20px;
+    margin: 0 auto;
   }
   .tab-title{
     padding-left: 10px;
@@ -103,5 +144,9 @@
     color: #333;
     font-size: 14px;
     /*padding: 0 3px;*/
+  }
+  .form-box{
+    width: 800px;
+    padding: 10px;
   }
 </style>

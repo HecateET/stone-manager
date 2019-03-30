@@ -41,7 +41,7 @@
     width: 100%;
     min-height: 800px;
     display: -webkit-box;
-    background-color: aqua;
+    /*background-color: aqua;*/
   }
   .manager-aside{
     top: 0;
@@ -49,7 +49,7 @@
     width: 200px;
     min-height: 800px;
     border-right: 1px solid #ccc;
-    background-color: aquamarine;
+    /*background-color: aquamarine;*/
   }
   .manager-content{
     -webkit-box-flex: 1;

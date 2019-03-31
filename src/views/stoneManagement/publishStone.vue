@@ -6,7 +6,7 @@
         <span><i class="glyphicon glyphicon-menu-right"></i> 奇石管理</span>
         <span><i class="glyphicon glyphicon-menu-right"></i> 发布奇石</span>
       </div>
-      <div class="form-box">
+      <div class="form-box table-responsive">
         <!--<form class="">-->
           <!--<div class="form-group row">-->
             <!--<label class="col-sm-2" for="stone-title">奇石标题</label>-->
@@ -14,13 +14,13 @@
           <!--</div>-->
         <!--</form>-->
         <form class="form-horizontal">
-          <div class="form-group">
+          <div class="row form-group">
             <label for="stone-title" class="col-sm-2 control-label">奇石标题</label>
             <div class="col-sm-10">
               <input type="email" class="form-control" id="stone-title" placeholder="请输入奇石头标题">
             </div>
           </div>
-          <div class="form-group">
+          <div class="row form-group">
             <label for="publish-time" class="col-sm-2 control-label">发布时间</label>
             <div class="col-sm-4">
               <input type="date" class="form-control" id="publish-time">
@@ -39,16 +39,37 @@
               </select>
             </div>
           </div>
+
+          <div class="form-group">
+            <label for="upload" class="col-sm-2 control-label">奇石描述</label>
+            <div class="col-sm-10">
+              <div class="upload-img">
+
+                <p class="glyphicon glyphicon-picture"></p>
+                <p class="upload-txt">点击上传奇石图片</p>
+                <input id="upload" type="file">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="desc" class="col-sm-2 control-label">奇石描述</label>
+            <div class="col-sm-10">
+              <textarea id="desc" class="desc-content" placeholder="请输入奇石描述"></textarea>
+            </div>
+          </div>
+
+          <div class="btn-content form-group">
+            <button class="btn btn-info publish-btn col-sm-2">发布</button>
+            <button class="btn btn-danger cancel-btn col-sm-2">取消</button>
+          </div>
         </form>
       </div>
 
       <!--富文本编辑器-->
-      <div ref="editor" style="margin: 10px 0; width: 1000px; text-align:left; background-color: #fff;"></div>
+      <!--<div ref="editor" class="editor"></div>-->
 
-      <div class="btn-content">
-        <button class="btn btn-info publish-btn">发布</button>
-        <button class="btn btn-danger cancel-btn">取消</button>
-      </div>
     </section>
 </template>
 
@@ -118,6 +139,7 @@
 
 <style scoped>
   .publish-stone{
+    font-size: 18px;
     padding: 10px 20px;
     background-color: #fff;
   }
@@ -130,11 +152,53 @@
   }
   .tab-title span{
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
     /*padding: 0 3px;*/
   }
   .form-box{
-    width: 800px;
-    padding: 10px;
+    width: 90%;
+    /*margin: 0;*/
+    margin: 15px;
+
+  }
+  .form-group{
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .control-label{
+    font-size: 16px;
+  }
+  .editor{
+    margin: 10px 0;
+    width: 90%;
+    text-align:left;
+    background-color: #fff;
+  }
+  .btn-content {
+    margin: 20px;
+  }
+  .btn-content button {
+    margin-left: 20px;
+  }
+  .upload-img{
+    display: -webkit-box;
+    width: 200px;
+    height: 180px;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    background: #ffc;
+    border-radius: 10px;
+  }
+  .upload-img p.glyphicon{
+    font-size: 40px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .upload-img p.upload-txt{
+    color: #999;
+  }
+  #upload{
+    display: none;
   }
 </style>

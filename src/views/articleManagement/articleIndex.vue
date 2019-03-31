@@ -7,7 +7,7 @@
         <span><i class="glyphicon glyphicon-menu-right"></i> 文章内容管理</span>
       </div>
       <div class="search-content input-group">
-        <input class="form-control" type="text" placeholder="Search for">
+        <input class="form-control" type="text" placeholder="输入文章名称或文章Id">
         <span class="input-group-btn">
         <button class="btn btn-default" type="button">搜索</button>
       </span>
@@ -32,7 +32,7 @@
               <td>{{item.articleType}}</td>
               <td>{{item.publishTime}}</td>
               <td>{{item.author}}</td>
-              <td>
+              <td style="width: 200px">
                 <button class="btn btn-info">修改</button>
                 <button class="btn btn-success">预览</button>
                 <button class="btn btn-danger">删除</button>
@@ -73,24 +73,24 @@
             },
             {
               articleId:1,
-              articleTitle:"奇石的渊源",
-              articleType:"九龙壁",
+              articleTitle:"百年奇遇，老挝田黄",
+              articleType:"寿山石",
               publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              author:"小番茄",
             },
             {
               articleId:2,
-              articleTitle:"奇石的渊源",
+              articleTitle:"好石头总会发光，不管放在哪里！",
               articleType:"九龙壁",
               publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              author:"Judy",
             },
             {
               articleId:34,
-              articleTitle:"奇石的渊源",
-              articleType:"九龙壁",
+              articleTitle:"古人和今人都赏石，二者有哪些区别？",
+              articleType:"和田玉",
               publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              author:"管理员",
             },
           ]
         }
@@ -101,17 +101,19 @@
 
 <style scoped>
   .article-index{
+    font-size: 18px;
     background-color: #fff;
     padding: 10px;
   }
   .article-table{
     margin: 10px;
     text-align: center;
+    vertical-align: middle;
     background-color: #fff;
   }
   table th,td{
     text-align: center;
-    vertical-align: center;
+    vertical-align: middle;
   }
   .tab-title{
     padding-left: 10px;
@@ -122,7 +124,7 @@
   }
   .tab-title span{
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
     /*padding: 0 3px;*/
   }
   .search-content{

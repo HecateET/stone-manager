@@ -8,7 +8,7 @@
       </div>
 
       <div class="search-content input-group">
-        <input class="form-control" type="text" placeholder="Search for">
+        <input class="form-control" type="text" placeholder="输入帖子名称或帖子Id">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button">搜索</button>
         </span>
@@ -30,10 +30,10 @@
           <tr v-for="(item,index) in portList" :key="index">
             <th scope="row">{{index+1}}</th>
             <td>{{item.portTitle}}</td>
-            <td>{{item.portType}}</td>
+            <td style="width: 80px;">{{item.portType}}</td>
             <td>{{item.publishTime}}</td>
             <td>{{item.author}}</td>
-            <td>
+            <td style="width: 200px">
               <button class="btn btn-info">修改</button>
               <button class="btn btn-success">预览</button>
               <button class="btn btn-danger">删除</button>
@@ -66,35 +66,35 @@
           portList:[
             {
               portId:34,
-              portTitle:"奇石的渊源",
-              portType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              portTitle:"一起来讨论从古至今，奇石的种类吧~",
+              portType:"所有",
+              publishTime:"2019-02-03 19:30:31",
+              author:"管理员",
             },
             {
               portId:34,
-              portTitle:"奇石的渊源",
-              portType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              portTitle:"重庆巴南奇石文化俱乐部分享石友藏石，欢迎前来分享！~",
+              portType:"巴南石",
+              publishTime:"2019-01-23 9:20:31",
+              author:"小土豆",
             },
             {
               portId:34,
-              portTitle:"奇石的渊源",
-              portType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              portTitle:"想靠卖石头赚钱，不努力再这么眼红都没用",
+              portType:"所有",
+              publishTime:"2019-01-10 13:10:31",
+              author:"小番茄",
             },
             {
               portId:34,
-              portTitle:"奇石的渊源",
-              portType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              portTitle:"谈谈好看的石头应该如何拍摄的更好看?",
+              portType:"所有",
+              publishTime:"2019-01-09 19:30:31",
+              author:"小可爱",
             },
             {
               portId:34,
-              portTitle:"奇石的渊源",
+              portTitle:"跟随《道德经》学玩石头，收益匪浅！",
               portType:"九龙壁",
               publishTime:"2019-01-03 19:30:31",
               author:"Hecate",
@@ -107,6 +107,7 @@
 
 <style scoped>
   .port-index{
+    font-size: 18px;
     width: 100%;
     background-color: #fff;
   }
@@ -117,7 +118,7 @@
   }
   table th,td{
     text-align: center;
-    vertical-align: center;
+    vertical-align: middle;
   }
   .tab-title{
     padding-left: 10px;
@@ -128,7 +129,7 @@
   }
   .tab-title span{
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
     /*padding: 0 3px;*/
   }
   .search-content{

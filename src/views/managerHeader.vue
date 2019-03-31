@@ -42,7 +42,7 @@
 
 <style scoped>
   .navbar, .dropdown-menu {
-    background-color: #528970;
+    background-color: #283137;
     margin: 0;
   }
 

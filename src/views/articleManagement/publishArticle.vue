@@ -44,12 +44,16 @@
       </div>
 
       <!--富文本编辑器-->
-      <div ref="editor" style="margin: 10px 0; width: 1000px; text-align:left; background-color: #fff;"></div>
+      <div ref="editor" class="editor"></div>
 
-      <div class="btn-content">
-        <button class="btn btn-info publish-btn">发布</button>
-        <button class="btn btn-danger cancel-btn">取消</button>
+      <div class="btn-content form-group">
+        <button class="btn btn-info publish-btn col-sm-2">发布</button>
+        <button class="btn btn-danger cancel-btn col-sm-2">取消</button>
       </div>
+      <!--<div class="btn-content">-->
+        <!--<button class="btn btn-info publish-btn">发布</button>-->
+        <!--<button class="btn btn-danger cancel-btn">取消</button>-->
+      <!--</div>-->
     </section>
 </template>
 
@@ -118,6 +122,7 @@
 
 <style scoped>
   .publish-article{
+    font-size: 18px;
     background-color: #fff;
     padding: 20px;
     margin: 0 auto;
@@ -142,11 +147,27 @@
   }
   .tab-title span{
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
     /*padding: 0 3px;*/
   }
   .form-box{
-    width: 800px;
+    width: 90%;
     padding: 10px;
+  }
+  .form-control{
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .editor{
+    /*margin: 10px 0;*/
+    width: 90%;
+    text-align:left;
+    background-color: #fff;
+  }
+  .btn-content {
+    margin: 20px;
+  }
+  .btn-content button {
+    margin-left: 20px;
   }
 </style>

@@ -8,7 +8,7 @@
       </div>
 
       <div class="search-content input-group">
-        <input class="form-control" type="text" placeholder="Search for">
+        <input class="form-control" type="text" placeholder="输入用户名或奇石id">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button">搜索</button>
         </span>
@@ -19,10 +19,10 @@
           <thead>
           <tr>
             <th>#</th>
-            <th>奇石名称</th>
+            <th>被评论奇石名称</th>
             <th>奇石类型</th>
             <th>发布时间</th>
-            <th>发布者</th>
+            <th>评论</th>
             <th>操作</th>
           </tr>
           </thead>
@@ -33,8 +33,8 @@
             <td>{{item.portType}}</td>
             <td>{{item.publishTime}}</td>
             <td>{{item.author}}</td>
-            <td>
-              <button class="btn btn-info">修改</button>
+            <td style="width: 200px;">
+              <!--<button class="btn btn-info">修改</button>-->
               <button class="btn btn-success">预览</button>
               <button class="btn btn-danger">删除</button>
             </td>
@@ -67,38 +67,38 @@
           stoneComment:[
             {
               portId:34,
-              portTitle:"奇石的渊源",
+              portTitle:"百年奇遇，老挝田黄",
+              portType:"田黄",
+              publishTime:"2019-02-03 19:30:31",
+              author:"Hecate",
+            },
+            {
+              portId:34,
+              portTitle:"好石头总会发光，不管放在哪里！",
+              portType:"九龙壁",
+              publishTime:"2019-02-02 19:30:31",
+              author:"Andy",
+            },
+            {
+              portId:34,
+              portTitle:"赏玩勿牵强附会",
               portType:"九龙壁",
               publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              author:"管理员",
             },
             {
               portId:34,
               portTitle:"奇石的渊源",
               portType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              publishTime:"2019-01-02 19:30:31",
+              author:"小可爱",
             },
             {
               portId:34,
-              portTitle:"奇石的渊源",
-              portType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
-            },
-            {
-              portId:34,
-              portTitle:"奇石的渊源",
-              portType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
-            },
-            {
-              portId:34,
-              portTitle:"奇石的渊源",
-              portType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
+              portTitle:"元旦新的一年你会遇到什么样的奇石",
+              portType:"所有",
+              publishTime:"2019-01-01 19:30:31",
+              author:"小番茄",
             },
           ],
         }
@@ -108,6 +108,7 @@
 
 <style scoped>
   .stone-comment{
+    font-size: 18px;
     padding: 10px;
     background-color: #fff;
   }
@@ -120,7 +121,7 @@
   }
   .tab-title span{
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
     /*padding: 0 3px;*/
   }
 
@@ -131,7 +132,7 @@
   }
   table th,td{
     text-align: center;
-    vertical-align: center;
+    vertical-align: middle;
   }
   .tab-title{
     padding-left: 10px;
@@ -142,7 +143,7 @@
   }
   .tab-title span{
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
     /*padding: 0 3px;*/
   }
   .search-content{

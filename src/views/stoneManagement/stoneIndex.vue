@@ -13,7 +13,7 @@
       <!--</ol>-->
 
       <div class="search-content input-group">
-        <input class="form-control" type="text" placeholder="Search for">
+        <input class="form-control" type="text" placeholder="输入奇石名字或奇石种类">
         <span class="input-group-btn">
         <button class="btn btn-default" type="button">搜索</button>
       </span>
@@ -23,22 +23,24 @@
         <table class="table table-bordered">
           <thead>
           <tr>
-            <th>#</th>
-            <th>奇石名称</th>
-            <th>奇石类型</th>
-            <th>发布时间</th>
-            <th>发布者</th>
-            <th>操作</th>
+            <th class="table-head">#</th>
+            <th class="table-head">奇石名称</th>
+            <th class="table-head">奇石类型</th>
+            <th class="table-head">发布时间</th>
+            <th class="table-head">发布者</th>
+            <th class="table-head">图片</th>
+            <th class="table-head">操作</th>
           </tr>
           </thead>
           <tbody>
           <tr style="vertical-align: center" v-for="(item,index) in stoneList" :key="index">
             <th scope="row">{{index+1}}</th>
-            <td>{{item.stoneTitle}}</td>
-            <td>{{item.stoneType}}</td>
-            <td>{{item.publishTime}}</td>
-            <td>{{item.author}}</td>
-            <td>
+            <td class="table-txt">{{item.stoneTitle}}</td>
+            <td class="table-txt">{{item.stoneType}}</td>
+            <td class="table-txt">{{item.publishTime}}</td>
+            <td class="table-txt">{{item.author}}</td>
+            <td class="table-txt"><img :src="item.imageUrl" style="width: 40px; height: 30px;"></td>
+            <td class="table-txt">
               <button class="btn btn-info">修改</button>
               <button class="btn btn-success">预览</button>
               <button class="btn btn-danger">删除</button>
@@ -72,9 +74,34 @@
           stoneList:[
             {
               stoneId:34,
-              stoneTitle:"奇石的渊源",
+              stoneTitle:"奇怪的石头哈哈",
+              stoneType:"九龙壁",
+              publishTime:"2019-01-31 19:30:31",
+              author:"Andy",
+              imageUrl:require("../../assets/images/stoneIndex/stone1.jpg"),
+            },
+            {
+              stoneId:34,
+              stoneTitle:"歲月的摧殘",
+              stoneType:"其他石种",
+              publishTime:"2019-01-03 19:30:31",
+              imageUrl:require("../../assets/images/stoneIndex/stone2.jpg"),
+              author:"Hecate",
+            },
+            {
+              stoneId:34,
+              stoneTitle:"大吉大利",
+              stoneType:"寿山石",
+              publishTime:"2019-01-03 19:30:31",
+              imageUrl:require("../../assets/images/stoneIndex/stone3.png"),
+              author:"小可爱",
+            },
+            {
+              stoneId:34,
+              stoneTitle:"飞黄腾达",
               stoneType:"九龙壁",
               publishTime:"2019-01-03 19:30:31",
+              imageUrl:require("../../assets/images/stoneIndex/stone4.png"),
               author:"Hecate",
             },
             {
@@ -82,27 +109,7 @@
               stoneTitle:"奇石的渊源",
               stoneType:"九龙壁",
               publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
-            },
-            {
-              stoneId:34,
-              stoneTitle:"奇石的渊源",
-              stoneType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
-            },
-            {
-              stoneId:34,
-              stoneTitle:"奇石的渊源",
-              stoneType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
-              author:"Hecate",
-            },
-            {
-              stoneId:34,
-              stoneTitle:"奇石的渊源",
-              stoneType:"九龙壁",
-              publishTime:"2019-01-03 19:30:31",
+              imageUrl:require("../../assets/images/stoneIndex/stone2.jpg"),
               author:"Hecate",
             },
           ],
@@ -124,9 +131,23 @@
     text-align: center;
     background-color: #fff;
   }
+
   .stone-table>.table>table>tbody>tr>td{
     text-align: center;
-    vertical-align: center;
+    vertical-align: middle;
+  }
+  .stone-table .table-head{
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .stone-table .table-txt{
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
   }
   .tab-title{
     padding-left: 10px;
@@ -137,7 +158,7 @@
   }
   .tab-title span{
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
     /*padding: 0 3px;*/
   }
   .search-content{

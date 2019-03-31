@@ -12,7 +12,7 @@
           <div class="form-group">
             <label for="stone-title" class="col-sm-2 control-label">帖子标题</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="stone-title" placeholder="请输入标题">
+              <input type="email" class="form-control" id="stone-title" placeholder="请输入帖子标题">
             </div>
           </div>
           <div class="form-group">
@@ -39,9 +39,9 @@
       <!--富文本编辑器-->
       <div ref="editor" class="editor"></div>
 
-      <div class="btn-content">
-        <button class="btn btn-info publish-btn">发布</button>
-        <button class="btn btn-danger cancel-btn">取消</button>
+      <div class="btn-content form-group">
+        <button class="btn btn-info publish-btn col-sm-2">发布</button>
+        <button class="btn btn-danger cancel-btn col-sm-2">取消</button>
       </div>
     </section>
 </template>
@@ -111,6 +111,7 @@
 
 <style scoped>
   .publish-port{
+    font-size: 18px;
     width: 100%;
     padding: 10px;
     background-color: #fff;
@@ -120,22 +121,33 @@
     height: 50px;
     line-height: 50px;
     border-bottom: 1px solid #eee;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
   }
   .tab-title span{
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
     /*padding: 0 3px;*/
   }
   .form-box{
-    width: 800px;
+    width: 90%;
     padding: 10px;
   }
+  .form-control{
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
   .editor{
-    margin: 10px 0;
-    width: 1000px;
+    margin: 5px 0;
+    width: 90%;
     /*height: 300px;*/
     text-align:left;
     background-color: #fff;
+  }
+  .btn-content {
+    margin: 20px;
+  }
+  .btn-content button {
+    margin-left: 20px;
   }
 </style>
